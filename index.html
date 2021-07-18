@@ -5,118 +5,52 @@
     <title>Webgl Demo</title>
 </head>
 
+<body onload="main()">
+<div style='margin:0 auto;width:400px'>
 
-  <body onload="main()">
-  <div style='margin:0 auto;width:400px'>
-    <canvas id="webgl" width="400" height="400">
-      Please use a browser that supports "canvas"
-    </canvas>
-    <script src="./lib/webgl-utils.js"></script>
-    <script src="./lib/webgl-debug.js"></script>
-    <script src="./lib/cuon-utils.js"></script>
-    <script src="./lib/cuon-matrix.js"></script>
-    <script src="PickFace.js"></script>
-    
-    <p>ch02</p>
-    <a href='./ch02/ClickedPoints.html'>ClickedPoints</a> <br/>
-    <a href='./ch02/ColoredPoints.html'>ColoredPoints</a> <br/>
-    <a href='./ch02/DrawRectangle.html'>DrawRectangle</a> <br/>
-    <a href='./ch02/HelloCanvas.html'>HelloCanvas</a> <br/>
-    <a href='./ch02/HelloPoint1.html'>HelloPoint1</a> <br/>
-    <a href='./ch02/HelloPoint2.html'>HelloPoint2</a> <br/>
-    <p>ch03</p>
-    <a href='./ch03/HelloQuad.html'>HelloQuad</a> <br/>
-    <a href='./ch03/HelloQuad_FAN.html'>HelloQuad_FAN</a> <br/>
-    <a href='./ch03/HelloTriangle.html'>HelloTriangle</a> <br/>
-    <a href='./ch03/HelloTriangle_LINES.html'>HelloTriangle_LINES</a> <br/>
-    <a href='./ch03/HelloTriangle_LINE_LOOP.html'>HelloTriangle_LINE_LOOP</a> <br/>
-    <a href='./ch03/HelloTriangle_LINE_STRIP.html'>HelloTriangle_LINE_STRIP</a> <br/>
-    <a href='./ch03/MultiPoint.html'>MultiPoint</a> <br/>
-    <a href='./ch03/RotatedTriangle.html'>RotatedTriangle</a> <br/>
-    <a href='./ch03/RotatedTriangle_Matrix.html'>RotatedTriangle_Matrix</a> <br/>
-    <a href='./ch03/ScaledTriangle_Matrix.html'>ScaledTriangle_Matrix</a> <br/>
-    <a href='./ch03/TranslatedTriangle.html'>TranslatedTriangle</a> <br/>
-    <p>ch04</p>
-    <a href='./ch04/RotatedTranslatedTriangle.html'>RotatedTranslatedTriangle</a> <br/>
-    <a href='./ch04/RotatedTriangle_Matrix4.html'>RotatedTriangle_Matrix4</a> <br/>
-    <a href='./ch04/RotatingTranslatedTriangle.html'>RotatingTranslatedTriangle</a> <br/>
-    <a href='./ch04/RotatingTriangle.html'>RotatingTriangle</a> <br/>
-    <a href='./ch04/RotatingTriangle_withButtons.html'>RotatingTriangle_withButtons</a> <br/>
-    <a href='./ch04/TranslatedRotatedTriangle.html'>TranslatedRotatedTriangle</a> <br/>
-    <p>ch05</p>
-    <a href='./ch05/ColoredTriangle.html'>ColoredTriangle</a> <br/>
-    <a href='./ch05/HelloTriangle_FragCoord.html'>HelloTriangle_FragCoord</a> <br/>
-    <a href='./ch05/MultiAttributeColor.html'>MultiAttributeColor</a> <br/>
-    <a href='./ch05/MultiAttributeSize.html'>MultiAttributeSize</a> <br/>
-    <a href='./ch05/MultiAttributeSize_Interleaved.html'>MultiAttributeSize_Interleaved</a> <br/>
-    <a href='./ch05/MultiTexture.html'>MultiTexture</a> <br/>
-    <a href='./ch05/TexturedQuad.html'>TexturedQuad</a> <br/>
-    <a href='./ch05/TexturedQuad_Clamp_Mirror.html'>TexturedQuad_Clamp_Mirror</a> <br/>
-    <a href='./ch05/TexturedQuad_Repeat.html'>TexturedQuad_Repeat</a> <br/>
-    <p>ch07</p>
-    <a href='./ch07/ColoredCube.html'>ColoredCube</a> <br/>
-    <a href='./ch07/ColoredCube_singleColor.html'>ColoredCube_singleColor</a> <br/>
-    <a href='./ch07/DepthBuffer.html'>DepthBuffer</a> <br/>
-    <a href='./ch07/HelloCube.html'>HelloCube</a> <br/>
-    <a href='./ch07/HelloCube_singleColor.html'>HelloCube_singleColor</a> <br/>
-    <a href='./ch07/LookAtRotatedTriangles.html'>LookAtRotatedTriangles</a> <br/>
-    <a href='./ch07/LookAtRotatedTriangles_mvMatrix.html'>LookAtRotatedTriangles_mvMatrix</a> <br/>
-    <a href='./ch07/LookAtTriangles.html'>LookAtTriangles</a> <br/>
-    <a href='./ch07/LookAtTrianglesWithKeys.html'>LookAtTrianglesWithKeys</a> <br/>
-    <a href='./ch07/LookAtTrianglesWithKeys_ViewVolume.html'>LookAtTrianglesWithKeys_ViewVolume</a> <br/>
-    <a href='./ch07/OrthoView.html'>OrthoView</a> <br/>
-    <a href='./ch07/OrthoView_halfSize.html'>OrthoView_halfSize</a> <br/>
-    <a href='./ch07/OrthoView_halfWidth.html'>OrthoView_halfWidth</a> <br/>
-    <a href='./ch07/PerspectiveView.html'>PerspectiveView</a> <br/>
-    <a href='./ch07/PerspectiveView_mvp.html'>PerspectiveView_mvp</a> <br/>
-    <a href='./ch07/PerspectiveView_mvpMatrix.html'>PerspectiveView_mvpMatrix</a> <br/>
-    <a href='./ch07/Zfighting.html'>Zfighting</a> <br/>
-    <p>ch08</p>
-    <a href='./ch08/LightedCube.html'>LightedCube</a> <br/>
-    <a href='./ch08/LightedCube_ambient.html'>LightedCube_ambient</a> <br/>
-    <a href='./ch08/LightedCube_animation.html'>LightedCube_animation</a> <br/>
-    <a href='./ch08/LightedCube_perFragment.html'>LightedCube_perFragment</a> <br/>
-    <a href='./ch08/LightedTranslatedRotatedCube.html'>LightedTranslatedRotatedCube</a> <br/>
-    <a href='./ch08/PointLightedCube.html'>PointLightedCube</a> <br/>
-    <a href='./ch08/PointLightedCube_animation.html'>PointLightedCube_animation</a> <br/>
-    <a href='./ch08/PointLightedCube_perFragment.html'>PointLightedCube_perFragment</a> <br/>
-    <a href='./ch08/PointLightedSphere.html'>PointLightedSphere</a> <br/>
-    <a href='./ch08/PointLightedSphere_perFragment.html'>PointLightedSphere_perFragment</a> <br/>
-    <p>ch09</p>
-    <a href='./ch09/JointModel.html'>JointModel</a> <br/>
-    <a href='./ch09/MultiJointModel.html'>MultiJointModel</a> <br/>
-    <a href='./ch09/MultiJointModel_segment.html'>MultiJointModel_segment</a> <br/>
-    <p>ch10</p>
-    <a href='./ch10/3DoverWeb.html'>3DoverWeb</a> <br/>
-    <a href='./ch10/BlendedCube.html'>BlendedCube</a> <br/>
-    <a href='./ch10/Fog.html'>Fog</a> <br/>
-    <a href='./ch10/Fog_w.html'>Fog_w</a> <br/>
-    <a href='./ch10/FramebufferObject.html'>FramebufferObject</a> <br/>
-    <a href='./ch10/HUD.html'>HUD</a> <br/>
-    <a href='./ch10/LookAtBlendedTriangles.html'>LookAtBlendedTriangles</a> <br/>
-    <a href='./ch10/OBJViewer.html'>OBJViewer</a> <br/>
-    <a href='./ch10/PickFace.html'>PickFace</a> <br/>
-    <a href='./ch10/Picking.html'>Picking</a> <br/>
-    <a href='./ch10/PickObject.html'>PickObject</a> <br/>
-    <a href='./ch10/ProgramObject.html'>ProgramObject</a> <br/>
-    <a href='./ch10/RotateObject.html'>RotateObject</a> <br/>
-    <a href='./ch10/RotatingTriangle_contextLost.html'>RotatingTriangle_contextLost</a> <br/>
-    <a href='./ch10/RoundedPoints.html'>RoundedPoints</a> <br/>
-    <a href='./ch10/Shadow.html'>Shadow</a> <br/>
-    <a href='./ch10/Shadow_highp.html'>Shadow_highp</a> <br/>
-    <a href='./ch10/Shadow_highp_sphere.html'>Shadow_highp_sphere</a> <br/>
-    <p>gifts</p>
-    <a href='./gifts/Particle.html'>gifts/Particle</a> <br/>
-    <a href='./gifts/Printf.html'>gifts/Printf</a> <br/>
-    <a href='./gifts/SpecularCube.html'>gifts/SpecularCube</a> <br/>
-    <a href='./gifts/TextTexture.html'>gifts/TextTexture</a> <br/>
-    <a href='./gifts/ThreeDUI.html'>gifts/ThreeDUI</a> <br/>
-    <a href='./gifts/Wave.html'>gifts/Wave</a> <br/>
-    <a href='./gifts/WorldCoordinate.html'>gifts/WorldCoordinate</a> <br/>
-    <p>Appendix</p>
-    <a href='./Appendix/CoordinateSystem.html'>Appendix/CoordinateSystem</a> <br/>
-    <a href='./Appendix/CoordinateSystem_viewVolume.html'>Appendix/CoordinateSystem_viewVolume</a> <br/>
-    <a href='./Appendix/LoadShaderFromFiles.html'>Appendix/LoadShaderFromFiles</a> <br/>
-  </div>
-  </body>
+</div>
+<div style="margin: 0 auto;width: 70%; display: flex;flex-direction: row">
+    <iframe id="iframe"
+            src="./ch10/PickFace.html"
+            style="display: block ;margin:0 auto; border:0; width:420px; height:420px;position: fixed;top: 0"></iframe>
+    <div style="margin-left: 420px">
+        <div id="container_chapter"></div>
+        <div id="container_section"></div>
+    </div>
+</div>
+
+<script>
+    let main = () => {
+        let currentPath = './ch10/PickFace.html';
+        let iframe = document.getElementById('iframe');
+        let container_chapter = document.getElementById('container_chapter');
+        let container_section = document.getElementById('container_section');
+
+        for (const obj of data) {
+            const title = document.createTextNode(obj.title);
+            const button_chapter = document.createElement('button');
+            button_chapter.appendChild(title);
+            container_chapter.appendChild(button_chapter);
+            button_chapter.onclick = (ev) => {
+                // while (container_section.lastChild) container_section.removeChild(container_section.lastChild);//清除子标签方法1
+                if (container_section.lastChild) container_section.innerHTML = '';//清除子标签方法2
+                for (const path of obj.pathArray) {
+                    const subTitle = document.createTextNode(path.substring(path.lastIndexOf('/') + 1, path.lastIndexOf('.')));
+                    const a = document.createElement('a');
+                    a.appendChild(subTitle);
+                    a.setAttribute('href', path);
+                    container_section.appendChild(a);
+                    container_section.appendChild(document.createElement('br'));
+                    a.onclick = (ev) => {
+                        currentPath = path;
+                        iframe.setAttribute('src', currentPath);
+                        ev.preventDefault();
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script src="./lib/data.js"></script>
+</body>
 </html>
